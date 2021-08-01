@@ -119,6 +119,11 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.heading,
   );
+  static final buttonOn = GoogleFonts.inter(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    color: AppColors.on,
+  );
   static final buttonDelete = GoogleFonts.inter(
     fontSize: 15,
     fontWeight: FontWeight.w400,
@@ -158,6 +163,16 @@ class AppTextStyles {
     fontSize: 13,
     fontWeight: FontWeight.w400,
     color: AppColors.heading,
+  );
+  static final captionOn = GoogleFonts.inter(
+    fontSize: 13,
+    fontWeight: FontWeight.w400,
+    color: AppColors.on,
+  );
+  static final captionLine = GoogleFonts.inter(
+    fontSize: 13,
+    fontWeight: FontWeight.w400,
+    color: AppColors.line,
   );
   static final captionPrimary = GoogleFonts.inter(
     fontSize: 13,

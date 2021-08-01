@@ -9,12 +9,14 @@ class CategoryCard extends StatelessWidget {
   final String image;
   final String label;
   final VoidCallback onTap;
+  final bool selected;
 
   const CategoryCard({
     Key? key,
     required this.image,
     required this.label,
     required this.onTap,
+    this.selected = false
   }) : super(key: key);
 
   @override
@@ -28,7 +30,7 @@ class CategoryCard extends StatelessWidget {
           color: AppColors.secondary40,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
-            color: AppColors.secondary50
+            color: selected ? AppColors.line : AppColors.secondary50
           )
         ),
         child: new Column(

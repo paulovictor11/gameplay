@@ -3,6 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gameplay/shared/theme/app_colors.dart';
 import 'package:gameplay/shared/theme/app_text_styles.dart';
+import 'package:gameplay/shared/widgets/buttons/discord_button.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({ Key? key }) : super(key: key);
@@ -50,47 +51,14 @@ class _AuthPageState extends State<AuthPage> {
               padding: const EdgeInsets.symmetric(
                 horizontal: 48
               ),
-              child: _discordButton(),
+              child: new DiscordButtonWidget(
+                label: 'Entrar com Discord',
+                onTap: () => Modular.to.pushReplacementNamed('/home'),
+              ),
             )
           ],
         ),
       ),
     );
   }
-
-  Widget _discordButton() => new GestureDetector(
-    onTap: () => Modular.to.pushNamed('/home'),
-    child: new Container(
-      height: 56,
-      decoration: new BoxDecoration(
-        color: AppColors.primary,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: new Row(
-        children: [
-          new Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 24
-            ),
-            child: new Icon(
-              FontAwesomeIcons.discord,
-              color: AppColors.heading,
-              size: 28,
-            )
-          ),
-          new Container(
-            width: 1,
-            color: AppColors.secondary80,
-          ),
-          new Expanded(
-            child: new Text(
-              'Entrar com Discord',
-              textAlign: TextAlign.center,
-              style: AppTextStyles.buttonBackground,
-            ),
-          )
-        ],
-      ),
-    ),
-  );
 }
