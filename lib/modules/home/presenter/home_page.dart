@@ -255,7 +255,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                new SizedBox(width: 8),
+                new SizedBox(width: 16),
                 new Expanded(
                   child: new Container(
                     height: 56,

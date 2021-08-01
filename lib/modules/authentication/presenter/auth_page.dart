@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gameplay/shared/theme/app_colors.dart';
 import 'package:gameplay/shared/theme/app_text_styles.dart';
 import 'package:gameplay/shared/widgets/buttons/discord_button.dart';
@@ -27,7 +26,7 @@ class _AuthPageState extends State<AuthPage> {
             ),
             new Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 36
+                horizontal: 24
               ),
               child: new Text(
                 'Conecte-se e organize suas jogatinas',
@@ -37,7 +36,7 @@ class _AuthPageState extends State<AuthPage> {
             ),
             new Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 48,
+                horizontal: 24,
                 vertical: 16
               ),
               child: new Text(
@@ -46,10 +45,10 @@ class _AuthPageState extends State<AuthPage> {
                 style: AppTextStyles.trailingBackground,
               ),
             ),
-            new SizedBox(height: 48),
+            new SizedBox(height: 36),
             new Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 48
+                horizontal: 24
               ),
               child: new DiscordButtonWidget(
                 label: 'Entrar com Discord',

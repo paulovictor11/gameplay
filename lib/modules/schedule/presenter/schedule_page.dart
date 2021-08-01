@@ -7,7 +7,6 @@ import 'package:gameplay/shared/widgets/buttons/select_widget.dart';
 import 'package:gameplay/shared/widgets/cards/category_card.dart';
 import 'package:gameplay/shared/widgets/inputs/input_widget.dart';
 import 'package:gameplay/shared/widgets/inputs/textarea_widget.dart';
-import 'package:gameplay/shared/widgets/lists/category_widget.dart';
 import 'package:gameplay/shared/widgets/tiles/simple_tile_widget.dart';
 
 class SchedulePage extends StatefulWidget {
