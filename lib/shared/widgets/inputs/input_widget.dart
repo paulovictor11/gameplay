@@ -13,6 +13,8 @@ class InputWidget extends StatelessWidget {
   final bool isPass;
   final double height;
   final double width;
+  final int? maxLength;
+  final TextAlign textAlign;
 
   const InputWidget({
     Key? key,
@@ -24,7 +26,9 @@ class InputWidget extends StatelessWidget {
     this.validator,
     this.isPass = false,
     this.height = 48,
-    this.width = 48
+    this.width = 48,
+    this.maxLength,
+    this.textAlign = TextAlign.start
   }) : super(key: key);
 
   @override
@@ -50,11 +54,18 @@ class InputWidget extends StatelessWidget {
               obscureText: isPass,
               validator: validator,
               initialValue: initialValue,
-              maxLength: 2,
-              textAlign: TextAlign.center,
+              maxLength: maxLength,
+              textAlign: textAlign,
               style: AppTextStyles.titleRegular,
               decoration: new InputDecoration(
+                hintText: label,
+                hintStyle: AppTextStyles.input,
+                icon: new Icon(
+                  icon, size: 26,
+                  color: AppColors.heading,
+                ),
                 border: InputBorder.none,
+                counterText: '',
                 contentPadding: EdgeInsets.only(
                   bottom: (height / 4) - 7
                 ),

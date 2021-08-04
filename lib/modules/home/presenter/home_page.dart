@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: _sectionTile(
                   title: 'Partidas Agendadas',
-                  subtitle: 'Total 6'
+                  subtitle: 'Total 7'
                 ),
               ),
               new Expanded(

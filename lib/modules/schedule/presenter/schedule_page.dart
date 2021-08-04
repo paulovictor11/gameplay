@@ -57,6 +57,7 @@ class _SchedulePageState extends State<SchedulePage> {
               new SizedBox(height: 32),
               new SelectWidget(
                 label: 'Selecione um servidor',
+                icon: Icons.cloud_rounded,
                 onTap: () => _showServers(),
               ),
               new SizedBox(height: 32),
@@ -74,7 +75,8 @@ class _SchedulePageState extends State<SchedulePage> {
               ),
               new TextareaWidget(
                 keyboardType: TextInputType.text,
-                controller: _descricao
+                controller: _descricao,
+                maxLength: 100,
               )
             ],
           ),
@@ -170,6 +172,8 @@ class _SchedulePageState extends State<SchedulePage> {
           new InputWidget(
             keyboardType: TextInputType.number,
             controller: _dia,
+            maxLength: 2,
+            textAlign: TextAlign.center,
           ),
           new SizedBox(width: 8),
           new Text(
@@ -180,6 +184,8 @@ class _SchedulePageState extends State<SchedulePage> {
           new InputWidget(
             keyboardType: TextInputType.number,
             controller: _mes,
+            maxLength: 2,
+            textAlign: TextAlign.center,
           )
         ],
       )
@@ -199,6 +205,8 @@ class _SchedulePageState extends State<SchedulePage> {
           new InputWidget(
             keyboardType: TextInputType.number,
             controller: _hora,
+            maxLength: 2,
+            textAlign: TextAlign.center,
           ),
           new SizedBox(width: 8),
           new Text(
@@ -209,6 +217,8 @@ class _SchedulePageState extends State<SchedulePage> {
           new InputWidget(
             keyboardType: TextInputType.number,
             controller: _minuto,
+            maxLength: 2,
+            textAlign: TextAlign.center,
           )
         ],
       )
@@ -242,36 +252,43 @@ class _SchedulePageState extends State<SchedulePage> {
                 new SimpleTileWidget(
                   title: 'Rumo ao topo',
                   subtitle: 'Administrador',
+                  icon: Icons.cloud_rounded,
                   onTap: () {}
                 ),
                 new SimpleTileWidget(
                   title: 'Bora queimar tudo',
                   subtitle: 'Convidado',
+                  icon: Icons.cloud_rounded,
                   onTap: () {}
                 ),
                 new SimpleTileWidget(
                   title: 'Yeah, boy',
                   subtitle: 'Convidado',
+                  icon: Icons.cloud_rounded,
                   onTap: () {}
                 ),
                 new SimpleTileWidget(
                   title: 'Volorosos',
                   subtitle: 'Convidado',
+                  icon: Icons.cloud_rounded,
                   onTap: () {}
                 ),
                 new SimpleTileWidget(
                   title: 'Rolezão monstro',
                   subtitle: 'Convidado',
+                  icon: Icons.cloud_rounded,
                   onTap: () {}
                 ),
                 new SimpleTileWidget(
                   title: 'Construtores',
                   subtitle: 'Convidado',
+                  icon: Icons.cloud_rounded,
                   onTap: () {}
                 ),
                 new SimpleTileWidget(
                   title: 'Battle Insane',
                   subtitle: 'Convidado',
+                  icon: Icons.cloud_rounded,
                   onTap: () {}
                 ),
               ],

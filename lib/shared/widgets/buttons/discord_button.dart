@@ -45,7 +45,7 @@ class DiscordButtonWidget extends StatelessWidget {
               child: new Text(
                 label,
                 textAlign: TextAlign.center,
-                style: AppTextStyles.buttonBackground,
+                style: AppTextStyles.titleRegular,
               ),
             )
           ],

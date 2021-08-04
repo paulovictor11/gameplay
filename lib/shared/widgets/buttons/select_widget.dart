@@ -6,11 +6,13 @@ import 'package:gameplay/shared/theme/app_text_styles.dart';
 class SelectWidget extends StatefulWidget {
 
   final String label;
+  final IconData icon;
   final VoidCallback onTap;
 
   const SelectWidget({
     Key? key,
     required this.label,
+    required this.icon,
     required this.onTap,
   }) : super(key: key);
 
@@ -41,7 +43,7 @@ class _SelectWidgetState extends State<SelectWidget> {
                 borderRadius: BorderRadius.circular(12),
               ),
               child: new Icon(
-                Icons.gamepad_rounded,
+                widget.icon,
                 color: AppColors.heading,
                 size: 36,
               ),

@@ -7,12 +7,14 @@ class SimpleTileWidget extends StatelessWidget {
 
   final String title;
   final String subtitle;
+  final IconData icon;
   final VoidCallback onTap;
 
   const SimpleTileWidget({
     Key? key,
     required this.title,
     required this.subtitle,
+    required this.icon,
     required this.onTap,
   }) : super(key: key);
 
@@ -35,7 +37,7 @@ class SimpleTileWidget extends StatelessWidget {
                 )
               ),
               child: new Icon(
-                Icons.gamepad_rounded,
+                icon,
                 color: AppColors.heading,
                 size: 36,
               ),

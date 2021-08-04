@@ -152,7 +152,7 @@ class AppTextStyles {
   static final input = GoogleFonts.inter(
     fontSize: 15,
     fontWeight: FontWeight.w400,
-    color: AppColors.highlight,
+    color: AppColors.heading,
   );
   static final inputPrimary = GoogleFonts.inter(
     fontSize: 15,

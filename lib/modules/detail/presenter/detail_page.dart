@@ -33,45 +33,52 @@ class _DetailPageState extends State<DetailPage> {
           )
         ],
       ),
-      body: new Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16
-        ),
-        child: new Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            new Flexible(
-              child: _header(),
+      body: new Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          new Flexible(
+            child: _header(),
+          ),
+          new Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16
             ),
-            _sectionTile(
+            child: _sectionTile(
               title: 'Jogadores',
               subtitle: 'Total 3'
             ),
-            new SizedBox(height: 16),
-            new Expanded(
+          ),
+          new Expanded(
+            child: new Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16
+              ),
               child: new ListView(
                 physics: new BouncingScrollPhysics(),
                 children: [
                   new SimpleTileWidget(
                     title: 'Paulo Victor',
                     subtitle: 'Disponível',
+                    icon: Icons.person_rounded,
                     onTap: () {}
                   ),
                   new SimpleTileWidget(
                     title: 'Kalenne Pereira',
                     subtitle: 'Offline',
+                    icon: Icons.person_rounded,
                     onTap: () {}
                   ),
                   new SimpleTileWidget(
                     title: 'Gabriel Dieric',
                     subtitle: 'Ocupado',
+                    icon: Icons.person_rounded,
                     onTap: () {}
                   ),
                 ]
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
       bottomNavigationBar: new Container(
         height: 85,
@@ -84,33 +91,27 @@ class _DetailPageState extends State<DetailPage> {
     );
   }
 
-  Widget _header() => new Stack(
-    children: [
-      new Center(
-        child: Image.asset(
+  Widget _header() => new Container(
+    alignment: Alignment.bottomLeft,
+    decoration: new BoxDecoration(
+      image: new DecorationImage(
+        image: new AssetImage(
           'assets/banner.png',
         ),
+        fit: BoxFit.fill
       ),
-      Padding(
-        padding: const EdgeInsets.only(
-          bottom: 15
-        ),
-        child: new Align(
-          alignment: Alignment.bottomLeft,
-          child: new ListTile(
-            isThreeLine: true,
-            title: new Text(
-              'Lendários',
-              style: AppTextStyles.titleListTileBackground,
-            ),
-            subtitle: new Text(
-              'É hoje que vamos chegar ao challenger sem perder uma partida na md10',
-              style: AppTextStyles.buttonBackground,
-            ),
-          ),
-        ),
-      )
-    ],
+    ),
+    child: new ListTile(
+      isThreeLine: true,
+      title: new Text(
+        'Lendários',
+        style: AppTextStyles.titleListTileBackground,
+      ),
+      subtitle: new Text(
+        'É hoje que vamos chegar ao challenger sem perder uma partida na md10',
+        style: AppTextStyles.buttonBackground,
+      ),
+    ),
   );
 
   Widget _sectionTile({
